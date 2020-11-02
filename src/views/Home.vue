@@ -84,20 +84,17 @@
               </label>
             </div>
           </div>
-          <div class="services-content d-flex align-items-center" id="services">
-            <div class="service-items">
+          <div class="services-content zipCodeSearchTop d-flex align-items-center" id="services">
+            <div class="service-items" style="width: 95%;">
               <form action="#" class="zipForm d-flex">
-                <input
-                  type="text"
-                  class="border-0 zipCode"
-                  placeholder="Type your zipcode"
-                  id="zipCode"
-                />
+                                        <v-select class="InputField zipCodeSelect"
+                          placeholder="Choose a Zip Code"
+                          id="inlineFormInputGroup" 
+                          :options="['Canda','Dubai', 'UK']"></v-select>
                 <button type="submit" class="section-bg">
                   <img src="@/assets/images/services/06.png" alt="services" />
                 </button>
               </form>
-              <img src="@/assets/images/banner/02.png" alt class="search-l-icon" />
             </div>
           </div>
         </div>
@@ -205,20 +202,12 @@
                   <div class="form-row align-items-center">
                     <div class="col-auto w-80">
                       <div class="input-group mb-2" id="placecolor">
-                        <div class="input-group-prepend user-location">
-                          <div class="input-group-text">
-                            <img src="@/assets/images/banner/02.png" alt />
-                          </div>
-                        </div>
-                        <input
-                          type="text"
-                          class="form-control InputField"
-                          id="inlineFormInputGroup"
-                          placeholder="Address,Sent peter 38009"
-                        />
+                        <v-select class="form-control InputField zipCodeSelect"
+                          placeholder="Choose a Zip Code"
+                          id="inlineFormInputGroup" 
+                          :options="['Canda','Dubai', 'UK']"></v-select>
                       </div>
                     </div>
-
                     <div class="col-auto user-submit">
                       <button type="submit" class="btn btn-primary mb-2">
                         <img src="@/assets/images/services/06.png" alt="services" />
@@ -226,6 +215,7 @@
                     </div>
                   </div>
                 </form>
+                
                 <!--Show location default situation hiden-->
                 <div class="show-location"></div>
               </div>

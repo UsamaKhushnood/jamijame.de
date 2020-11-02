@@ -9,20 +9,20 @@ import CreateNewPW from '@/components/CreateNewPW'
 
 Vue.use(VueRouter)
 
-  const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {path: '/terms-of-use', name: 'Termofuse', component: Termsofuse},
-  {path: '/privacy-policy', name: 'PrivacyPolicy', component: PrivacyPolicy},
-  {path: '/tracking', name: 'Tracking', component: Tracking},
-  {path: '/create-new-pw', name: 'CreateNewPW', component: CreateNewPW},
+const routes = [{
+        path: '/',
+        name: 'Home',
+        component: Home
+    },
+    { path: '/terms-of-use', name: 'Termofuse', component: Termsofuse },
+    { path: '/privacy-policy', name: 'PrivacyPolicy', component: PrivacyPolicy },
+    { path: '/tracking', name: 'Tracking', component: Tracking },
+    { path: '/create-new-pw', name: 'CreateNewPW', component: CreateNewPW },
 ]
 
 const router = new VueRouter({
-  routes
+    mode: 'history',
+    routes
 })
 
 export default router

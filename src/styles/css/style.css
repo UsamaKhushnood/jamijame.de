@@ -35,6 +35,7 @@ a {
 a:hover {
     text-decoration: none;
 }
+
 p {
     margin-top: 0;
     margin-bottom: 0rem;
@@ -111,14 +112,14 @@ section.services-area .services-content div label {
     margin-bottom: 0;
 }
 
-
-div#inner-services-select > div {
+div#inner-services-select>div {
     display: block;
     width: 100%;
     border-right: 1px solid #dddd;
     cursor: pointer;
 }
-div#inner-services-select > div > label{
+
+div#inner-services-select>div>label {
     cursor: pointer;
     width: 100%;
     margin-bottom: 0;
@@ -128,11 +129,12 @@ input[name="navBtn"] {
     display: none;
 }
 
-input[type=radio][name="navBtn"]:checked + div {
+input[type=radio][name="navBtn"]:checked+div {
     background: green;
 }
 
-input[type=radio][name="navBtn"]:checked + div h5, input[type=radio][name="navBtn"]:checked + div p {
+input[type=radio][name="navBtn"]:checked+div h5,
+input[type=radio][name="navBtn"]:checked+div p {
     color: #fff;
 }
 
@@ -172,9 +174,9 @@ section.services-area .services-content:last-child {
 }
 
 div#services {
-    padding: 0 0 0 13px;
+    padding: 0;
     position: relative;
-    border: 1px solid #c2c2c2;
+    border: 0;
 }
 
 input.zipCode {
@@ -314,7 +316,7 @@ section.banner-area:before {
     padding-bottom: 55px;
 }
 
-.all-delivery-wrapp .section-heading.text-center a:hover{
+.all-delivery-wrapp .section-heading.text-center a:hover {
     text-decoration: none;
     background: #70ac45 !important;
 }
@@ -445,17 +447,38 @@ div#inner-services-select {
 }
 
 .form-address-area .form-control {
-    padding: 19px 20px;
+    padding: 0;
     font-size: 1rem;
     line-height: 1.5;
     color: #495057;
     background-color: #fff;
     background-clip: padding-box;
-    border: 1px solid #dbdada;
-    border-radius: .25rem;
+    border: 0;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     border-left: 0;
-    padding-left: 0;
+}
+
+.zipCodeSelect:before {
+    content: url(../../assets/images/banner/02.png);
+    position: absolute;
+    top: 22px;
+    left: 20px;
+}
+
+div#inlineFormInputGroup div[role="combobox"] {
+    padding: 18px;
+    max-height: 65px;
+    padding-left: 45px;
+}
+
+ul[role="listbox"] li {
+    vertical-align: text-bottom;
+    padding: 18px;
+}
+
+ul[role="listbox"] li:before {
+    content: url(../../assets/images/banner/02.png);
+    margin-right: 10px;
 }
 
 #inlineFormInputGroup {
@@ -463,6 +486,15 @@ div#inner-services-select {
     border-right: 0;
     position: relative;
     height: 65px;
+    width: 100%;
+}
+
+.zipCodeSearchTop>div {
+    padding: 0;
+}
+
+.zipCodeSearchTop>div #inlineFormInputGroup {
+    height: 75px;
 }
 
 .col-auto.w-80 {
@@ -527,8 +559,8 @@ div#zipCodeautocomplete-list {
     height: 176px !important;
     height: 100%;
     overflow-y: scroll;
-    z-index:5020;
-    padding:10px;
+    z-index: 5020;
+    padding: 10px;
 }
 
 div#zipCodeautocomplete-list div {
@@ -550,6 +582,8 @@ img.search-l-icon {
     bottom: 0;
     right: 0;
 }
+
+
 /* ****************************** our-work-area ****************************** */
 
 .our-work {
@@ -602,7 +636,7 @@ img.search-l-icon {
     border-radius: 15px;
 }
 
-.imgText{
+.imgText {
     background: #e9f3e1;
     padding: 10px 5px;
     border-radius: 15px;
@@ -633,6 +667,7 @@ img.search-l-icon {
     width: 100%;
 }
 
+
 /* ****************************** our-delivery-area ****************************** */
 
 .section-bg1 {
@@ -651,6 +686,7 @@ img.search-l-icon {
 
 .section-bg2 .delivery-bg:before {
     background: url(../../assets/images/delivery-img/01_b2.jpeg) no-repeat;
+    background-size: cover;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
     right: 0;
 }
@@ -689,6 +725,7 @@ img.search-l-icon {
 
 .section-bg4 .delivery-bg:before {
     background: url(../../assets/images/delivery-img/01_b4.jpeg) no-repeat;
+    background-size: cover;
     clip-path: polygon(0 0, 100% 0, 89% 100%, 0% 100%);
     left: 0;
     width: 40%;
@@ -1050,4 +1087,3 @@ ul.mt-10 {
     -ms-border-radius: 0;
     -o-border-radius: 0;
 }
-

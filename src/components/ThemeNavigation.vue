@@ -1,5 +1,5 @@
 <template>
-  <div style="box-shadow: -6px -4px 17px #908989;">
+  <div style="box-shadow: -6px -4px 17px #908989">
     <div class="themeNav">
       <router-link class="logo" to="/">
         <img href="#dsfasdf" src="@/assets/logo.png" alt="Logo" width="40px" />
@@ -8,7 +8,11 @@
         <button id="show-modal" @click="LoginModal = true">
           <img src="@/assets/images/user.png" alt="Login" />
         </button>
-        <bs-modal v-if="LoginModal" cstmWidth="800px" @close="LoginModal = false">
+        <bs-modal
+          v-if="LoginModal"
+          cstmWidth="800px"
+          @close="LoginModal = false"
+        >
           <div slot="body">
             <Login></Login>
           </div>
@@ -36,11 +40,11 @@ export default {
 </script>
 <style scoped>
 .themeNav {
-    display: flex;
-    min-height: 60px;
-    background: #fff;
-    padding: 5px 30px;
-    align-items: center;
+  display: flex;
+  min-height: 60px;
+  background: #fff;
+  padding: 5px 30px;
+  align-items: center;
 }
 .userLogin {
   margin-left: auto;

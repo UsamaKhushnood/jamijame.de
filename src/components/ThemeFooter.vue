@@ -2,18 +2,17 @@
   <div>
     <div class="fixedFooter">
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-6">
           <p>
             All rights reserved for
             <a href="https://yamiyami.de/home">YamiYami.de</a>
           </p>
         </div>
-        <div class="col-md-4">
-          <div>
+        <div class="col-md-6 d-flex justify-content-end privacyPolicy">
             <router-link to="/privacy-policy">Privacy Policy</router-link>
             <router-link to="/terms-of-use">Terms of Use</router-link>
             <button id="show-modal" @click="LanguageModal = true">
-              <img src="@/assets/images/flags/german.png" />
+              <img style="height: 25px;" src="@/assets/images/flags/german.png" />
             </button>
             <bs-modal
               v-if="LanguageModal"
@@ -40,7 +39,6 @@
                 </div>
               </div>
             </bs-modal>
-          </div>
         </div>
       </div>
     </div>
@@ -273,28 +271,7 @@
         </div>
       </div>
     </div>
-    <!-- *********************** copyright *********************** -->
-    <section class="section-alert-area">
-      <div class="copyrights-area alert alert-dismissible fade show single-copyright" role="alert">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 offset-lg-2">
-              <div class="restaurant-alert">
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio impedit commodi, suscipit aut deleniti facere totam mollitia expedita quod.aut deleniti facere
-                  <strong>
-                    <a href="#">expedita quod aliquid</a>
-                  </strong>
-                </p>
-                <button type="button" class="close Ok-btn" data-dismiss="alert" aria-label="Close">
-                  <span aria-hidden="true" class="btn btn-info">ok</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+
   </div>
 </template>
 <script>
@@ -315,4 +292,9 @@ export default {
 p {
   margin-bottom: 0px !important;
 }
+
+.privacyPolicy a {
+    margin-right: 15px;
+}
+
 </style>
